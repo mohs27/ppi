@@ -168,6 +168,9 @@ video {
   word-wrap: break-word;
   text-decoration: none;
 }
+.relVid__link:hover {
+  color:  #A9A9A9;
+}
 
 .relVid__thumbnailWrapper {
   padding: 28.125%;
