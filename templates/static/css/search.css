@@ -35,8 +35,11 @@ main {
 
 .videoLink {
   color: #212121;
+  text-decoration: none;
 }
-
+.videoLink:hover {
+  color:  #A9A9A9;
+}
 .thumbnailWrapper {
   padding: 28.125%;
   position: relative;
