@@ -1,4 +1,8 @@
 DOMAIN: 'https://domain.tld'
+DOMAIN_TWITTER: 'https://nitter.tld'
+DOMAIN_YOUTUBE: 'https://invidious.tld'
+DOMAIN_INSTAGRAM: 'https://bibliogram.tld'
+DOMAIN_REDDIT: 'https://teddit.tld'
 PORT: '3000'
 # Running a custom API server is not recommended and is not suitable for a public instance
 API_URL: 'https://api.na-backend.odysee.com/api/v1/proxy'
