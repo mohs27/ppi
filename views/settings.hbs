@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> 'partials/head' }}
+
+  <link rel="stylesheet" href="/static/css/settings.css" />
+  <link rel="stylesheet" href="/static/fonts/Material-Icons-Outlined.css" />
+
+  <title>Settings - Librarian</title>
+</head>
+
+<body>
+  {{> 'partials/header' }}
+
+  <main>
+    <h2 class="sectionHeader">Settings</h2>
+    <noscript>Settings requires JavaScript.</noscript>
+
+    <div class="selectOpt">
+      <select>
+        <option value="light" selected="">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <p>Theme</p>
+    </div>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="relatedVideos" name="relatedVideos">
+        <span class="slider"></span>
+      </label>
+      <label for="relatedVideos">Show related videos</label>
+    </div>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="collapseComments" name="collapseComments">
+        <span class="slider"></span>
+      </label>
+      <label for="collapseComments">Collapse comments</label>
+    </div>
+
+    <h3>Player</h3>
+
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="autoplay" name="autoplay">
+        <span class="slider"></span>
+      </label>
+      <label for="autoplay">Autoplay</label>
+    </div>
+    <div class="selectOpt">
+      <select>
+        <option value="0.5x">0.5x</option>
+        <option value="0.75x">0.75x</option>
+        <option value="1x" selected="">1x</option>
+        <option value="1.25x">1.25x</option>
+        <option value="1.5x">1.5x</option>
+        <option value="1.75x">1.75x</option>
+        <option value="2x">2x</option>
+        <option value="4x">4x</option>
+      </select>
+      <p>Speed</p>
+    </div>
+    <div class="selectOpt">
+      <select>
+        <option value="auto" selected="">Auto</option>
+        <option value="144p">144p</option>
+        <option value="360p">360p</option>
+        <option value="720p">720p</option>
+        <option value="1080p">1080p</option>
+      </select>
+      <p>Video quality (some videos only)</p>
+    </div>
+
+    <div class="sbSectionHeader">
+      <h3>SponsorBlock</h3>
+      <p class="betaLabel">BETA</p>
+    </div>
+
+    <div class="selectOpt">
+      <select>
+        <option value="disable" selected="">Disable</option>
+        <option value="autoSkip">Skip</option>
+      </select>
+      <p>Sponsor</p>
+    </div>
+    <div class="selectOpt">
+      <select>
+        <option value="disable" selected="">Disable</option>
+        <option value="autoSkip">Skip</option>
+      </select>
+      <p>Unpaid/Self Promotion</p>
+    </div>
+    <div class="selectOpt">
+      <select>
+        <option value="disable" selected="">Disable</option>
+        <option value="autoSkip">Skip</option>
+      </select>
+      <p>Interaction Reminder (Subscribe)</p>
+    </div>
+    <div class="selectOpt">
+      <select>
+        <option value="disable" selected="">Disable</option>
+        <option value="autoSkip">Skip</option>
+      </select>
+      <p>Endcards/Credits</p>
+    </div>
+    <div class="selectOpt">
+      <select>
+        <option value="disable" selected="">Disable</option>
+        <option value="autoSkip">Skip</option>
+      </select>
+      <p>Preview/Recap</p>
+    </div>
+    <div class="selectOpt">
+      <select>
+        <option value="disable" selected="">Disable</option>
+        <option value="autoSkip">Skip</option>
+      </select>
+      <p>Filler Tangent/Jokes</p>
+    </div>
+  </main>
+
+  {{> 'partials/footer' }}
+</body>
+
+</html>
