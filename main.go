@@ -85,6 +85,7 @@ func main() {
 	app.Post("/search", pages.SearchHandler)
 	app.Get("/privacy", pages.PrivacyHandler)
 	app.Get("/about", pages.AboutHandler)
+	app.Get("/settings", pages.SettingsHandler)
 
 	app.Get("/robots.txt", func(c *fiber.Ctx) error {
 		file, _ := static.GetFiles().ReadFile("robots.txt")
