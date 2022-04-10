@@ -19,8 +19,12 @@
   margin-top: -1em;
 }
 
-.subscribeBtn:hover {
-  background-color: #2196f3;
+.description p {
+  margin: 0;
+}
+
+.claimsGrid {
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 812px) {
