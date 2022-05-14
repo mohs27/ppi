@@ -55,26 +55,33 @@
       </label>
       <label for="autoplay">Autoplay</label>
     </div>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="autoplayNextVid" name="autoplayNextVid">
+        <span class="slider"></span>
+      </label>
+      <label for="autoplayNextVid">Autoplay next video</label>
+    </div>
     <div class="selectOpt">
-      <select>
-        <option value="0.5x">0.5x</option>
-        <option value="0.75x">0.75x</option>
-        <option value="1x" selected="">1x</option>
-        <option value="1.25x">1.25x</option>
-        <option value="1.5x">1.5x</option>
-        <option value="1.75x">1.75x</option>
-        <option value="2x">2x</option>
-        <option value="4x">4x</option>
+      <select id="speed">
+        <option value="0.5">0.5x</option>
+        <option value="0.75">0.75x</option>
+        <option value="1" selected="">1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="1.75">1.75x</option>
+        <option value="2">2x</option>
+        <option value="4">4x</option>
       </select>
       <p>Speed</p>
     </div>
     <div class="selectOpt">
-      <select>
-        <option value="auto" selected="">Auto</option>
-        <option value="144p">144p</option>
-        <option value="360p">360p</option>
-        <option value="720p">720p</option>
-        <option value="1080p">1080p</option>
+      <select id="quality">
+        <option value="0" selected="">Auto</option>
+        <option value="144">144p</option>
+        <option value="360">360p</option>
+        <option value="720">720p</option>
+        <option value="1080">1080p</option>
       </select>
       <p>Video quality (some videos only)</p>
     </div>
@@ -129,6 +136,8 @@
   </main>
 
   {{> 'partials/footer' }}
+
+  <script src="/static/js/settings.js"></script>
 </body>
 
 </html>
