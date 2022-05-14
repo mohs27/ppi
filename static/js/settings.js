@@ -7,8 +7,8 @@ function loadSettings() {
   let plyrSettings = JSON.parse(localStorage.getItem("plyr")) || {};
   speedSelect.value = plyrSettings.speed || "1";
   qualitySelect.value = plyrSettings.quality || "0";
-  autoplaySelect.checked = localStorage.getItem("autoplay") || false;
-  autoplayNextVidSelect.checked = localStorage.getItem("autoplayNextVid") || false;
+  autoplaySelect.checked = localStorage.getItem("autoplay") === "true" || false;
+  autoplayNextVidSelect.checked = localStorage.getItem("autoplayNextVid") === "true" || false;
 }
 loadSettings()
 
