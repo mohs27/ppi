@@ -1,10 +1,10 @@
 const player = new Plyr('#player');
 
-if (localStorage.getItem("autoplay")) {
+if (localStorage.getItem("autoplay") === "true") {
   player.on('ready', player.play())
 }
 
-if (localStorage.getItem("autoplayNextVid")) {
+if (localStorage.getItem("autoplayNextVid") === "true") {
   let nextVid = document.getElementsByClassName("relVid__link")
   nextVid = nextVid[0].getAttribute("href")
   
