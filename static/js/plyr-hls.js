@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
           0: 'Auto',
         },
       }
-      defaultOptions.autoplay = localStorage.getItem("autoplay") ? true : false
+      defaultOptions.autoplay = localStorage.getItem("autoplay") === "true" ? true : false
 
       hls.on(Hls.Events.LEVEL_SWITCHED, function (event, data) {
         var span = document.querySelector(".plyr__menu__container [data-plyr='quality'][value='0'] span")
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Initialize new Plyr player with quality options
       var player = new Plyr(video, defaultOptions);
 
-      if (localStorage.getItem("autoplay")) {
+      if (localStorage.getItem("autoplay") === "true") {
         player.on('ready', player.play())
       }
 
