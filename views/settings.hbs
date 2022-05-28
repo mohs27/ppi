@@ -18,7 +18,7 @@
     <noscript>Settings requires JavaScript.</noscript>
 
     <div class="selectOpt">
-      <select>
+      <select id="theme">
         <option value="light" selected="">Light</option>
         <option value="dark">Dark</option>
       </select>
@@ -26,14 +26,14 @@
     </div>
     <div class="switchWrapper">
       <label class="switch">
-        <input type="checkbox" id="relatedVideos" name="relatedVideos">
+        <input type="checkbox" id="showRelated" name="showRelated" checked>
         <span class="slider"></span>
       </label>
-      <label for="relatedVideos">Show related videos</label>
+      <label for="showRelated">Show related videos</label>
     </div>
     <div class="switchWrapper">
       <label class="switch">
-        <input type="checkbox" id="collapseComments" name="collapseComments">
+        <input type="checkbox" id="collapseComments" name="collapseComments" checked>
         <span class="slider"></span>
       </label>
       <label for="collapseComments">Collapse comments</label>

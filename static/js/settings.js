@@ -1,3 +1,42 @@
+// General settings
+let generalSettings = ["theme", "showRelated", "collapseComments", "nsfw"]
+
+function updateGeneralSetting(setting) {
+  let elem = document.getElementById(setting)
+
+  if (setting == "nsfw") {
+    document.cookie = "nsfw=" + elem.checked + "; path=/; SameSite=Strict"
+  } else if (setting == "theme") {
+    localStorage.setItem(setting, elem.value)
+  } else {
+    localStorage.setItem(setting, elem.checked)
+  }
+}
+
+function loadGeneralSetting(setting) {
+  let elem = document.getElementById(setting)
+
+  if (setting == "nfsw") {
+    if (document.cookie.includes("nsfw=true")) {
+      elem.checked = true
+    }
+  } else if (setting == "theme") {
+    elem.value = localStorage.getItem(setting) || "light"
+  } else {
+    let value = localStorage.getItem(setting)
+    if (value) {
+      elem.checked = value
+    }
+  }
+}
+
+generalSettings.forEach(setting => {
+  let select = document.getElementById(setting)
+  select.addEventListener("change", () => updateGeneralSetting(setting))
+  loadGeneralSetting(setting)
+})
+
+// Player settings
 let autoplaySelect = document.getElementById("autoplay");
 let autoplayNextVidSelect = document.getElementById("autoplayNextVid");
 let speedSelect = document.getElementById("speed");
@@ -31,7 +70,7 @@ speedSelect.addEventListener("change", () => {
   localStorage.setItem("plyr", JSON.stringify(data));
 })
 
-// SponsorBlock
+// SponsorBlock settings
 let categories = ["sponsor", "selfpromo", "interaction", "intro", "outro", "preview", "filler"]
 
 function updateSBSetting(category) {
