@@ -35,7 +35,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	//viper.Set("AUTH_TOKEN", api.NewUser())
+	viper.Set("AUTH_TOKEN", api.NewUser())
 	viper.WriteConfig()
 	if viper.GetString("HMAC_KEY") == "" {
 		b := make([]byte, 36)
