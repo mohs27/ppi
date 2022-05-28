@@ -35,7 +35,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	viper.Set("AUTH_TOKEN", api.NewUser())
+	//viper.Set("AUTH_TOKEN", api.NewUser())
 	viper.WriteConfig()
 	if viper.GetString("HMAC_KEY") == "" {
 		b := make([]byte, 36)
@@ -99,6 +99,7 @@ func main() {
 	})
 
 	app.Get("/api/comments", api.CommentsHandler)
+	app.Get("/api/sponsorblock/:id", proxy.ProxySponsorBlock)
 
 	app.Get("/:channel/", pages.ChannelHandler)
 	app.Get("/$/invite/:channel", pages.ChannelHandler)

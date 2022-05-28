@@ -30,3 +30,31 @@ speedSelect.addEventListener("change", () => {
   data.speed = speedSelect.value * 1;
   localStorage.setItem("plyr", JSON.stringify(data));
 })
+
+// SponsorBlock
+let categories = ["sponsor", "selfpromo", "interaction", "intro", "outro", "preview", "filler"]
+
+function updateSBSetting(category) {
+  let categories = localStorage.getItem("sb_categories") || "";
+  if (categories.includes(category)) {
+    let re = new RegExp(`,?${category}`)
+    localStorage.setItem("sb_categories", categories.replace(re, ""));
+  } else if (categories.length == 0) {
+    localStorage.setItem("sb_categories", categories + category);
+  } else {
+    localStorage.setItem("sb_categories", categories + "," + category);
+  }
+
+  let newCategories = localStorage.getItem("sb_categories")
+  if (newCategories.startsWith(",")) {
+    localStorage.setItem("sb_categories", newCategories.substring(1, 999));
+  }
+}
+
+categories.forEach(category => {
+  let select = document.getElementById(category)
+  select.addEventListener("change", () => updateSBSetting(category))
+  if (localStorage.getItem("sb_categories").includes(category)) {
+    select.checked = true
+  }
+})

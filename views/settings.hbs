@@ -90,48 +90,56 @@
       <h3>SponsorBlock</h3>
       <p class="betaLabel">BETA</p>
     </div>
+    <p>Uses the <a href="https://sponsor.ajay.app/">SponsorBlock</a> API. Video IDs are kept private. Only works for YouTube synced videos.</p>
 
-    <div class="selectOpt">
-      <select>
-        <option value="disable" selected="">Disable</option>
-        <option value="autoSkip">Skip</option>
-      </select>
-      <p>Sponsor</p>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="sponsor" name="sponsor">
+        <span class="slider"></span>
+      </label>
+      <label for="sponsor">Sponsor</label>
     </div>
-    <div class="selectOpt">
-      <select>
-        <option value="disable" selected="">Disable</option>
-        <option value="autoSkip">Skip</option>
-      </select>
-      <p>Unpaid/Self Promotion</p>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="selfpromo" name="selfpromo">
+        <span class="slider"></span>
+      </label>
+      <label for="selfpromo">Unpaid/Self Promotion</label>
     </div>
-    <div class="selectOpt">
-      <select>
-        <option value="disable" selected="">Disable</option>
-        <option value="autoSkip">Skip</option>
-      </select>
-      <p>Interaction Reminder (Subscribe)</p>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="interaction" name="interaction">
+        <span class="slider"></span>
+      </label>
+      <label for="interaction">Interaction Reminder (Subscribe)</label>
     </div>
-    <div class="selectOpt">
-      <select>
-        <option value="disable" selected="">Disable</option>
-        <option value="autoSkip">Skip</option>
-      </select>
-      <p>Endcards/Credits</p>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="intro" name="intro">
+        <span class="slider"></span>
+      </label>
+      <label for="intro">Intro</label>
     </div>
-    <div class="selectOpt">
-      <select>
-        <option value="disable" selected="">Disable</option>
-        <option value="autoSkip">Skip</option>
-      </select>
-      <p>Preview/Recap</p>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="outro" name="outro">
+        <span class="slider"></span>
+      </label>
+      <label for="outro">Outro</label>
     </div>
-    <div class="selectOpt">
-      <select>
-        <option value="disable" selected="">Disable</option>
-        <option value="autoSkip">Skip</option>
-      </select>
-      <p>Filler Tangent/Jokes</p>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="preview" name="preview">
+        <span class="slider"></span>
+      </label>
+      <label for="preview">Preview/Recap</label>
+    </div>
+    <div class="switchWrapper">
+      <label class="switch">
+        <input type="checkbox" id="filler" name="filler">
+        <span class="slider"></span>
+      </label>
+      <label for="filler">Filler Tangent/Jokes</label>
     </div>
   </main>
 
