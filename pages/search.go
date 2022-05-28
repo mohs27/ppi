@@ -27,7 +27,7 @@ func SearchHandler(c *fiber.Ctx) error {
 	}
 
 	nsfw := false
-	if c.Query("nsfw") == "true" {
+	if c.Query("nsfw") == "true" || c.Cookies("nsfw") == "true" {
 		nsfw = true
 	}
 
