@@ -1,3 +1,9 @@
+function getCookie(name) {
+  let cookies = document.cookie.split("; ");
+  let cookie = cookies.filter(cookie => cookie.includes(name))[0]
+  return cookie ? cookie.split("=")[1] : "";
+}
+
 // General settings
 let generalSettings = ["theme", "showRelated", "collapseComments", "nsfw"]
 
@@ -5,9 +11,9 @@ function updateGeneralSetting(setting) {
   let elem = document.getElementById(setting)
 
   if (setting == "nsfw") {
-    document.cookie = "nsfw=" + elem.checked + "; path=/; SameSite=Strict"
+    document.cookie = "nsfw=" + elem.checked + "; path=/; SameSite=Strict; max-age=2147483647"
   } else if (setting == "theme") {
-    localStorage.setItem(setting, elem.value)
+    document.cookie = "theme=" + elem.value + "; path=/; SameSite=Strict; max-age=2147483647"
   } else {
     localStorage.setItem(setting, elem.checked)
   }
@@ -21,7 +27,7 @@ function loadGeneralSetting(setting) {
       elem.checked = true
     }
   } else if (setting == "theme") {
-    elem.value = localStorage.getItem(setting) || "light"
+    elem.value = getCookie("theme") || "light"
   } else {
     let value = localStorage.getItem(setting)
     if (value) {
@@ -93,7 +99,8 @@ function updateSBSetting(category) {
 categories.forEach(category => {
   let select = document.getElementById(category)
   select.addEventListener("change", () => updateSBSetting(category))
-  if (localStorage.getItem("sb_categories").includes(category)) {
+  let categories = localStorage.getItem("sb_categories") || ""
+  if (categories.includes(category)) {
     select.checked = true
   }
 })

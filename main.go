@@ -57,8 +57,14 @@ func main() {
 				code = e.Code
 			}
 
+			theme := "light"
+			if ctx.Cookies("theme") != "" {
+				theme = ctx.Cookies("theme")
+			}
+
 			err = ctx.Status(code).Render("error", fiber.Map{
 				"err": err,
+				"theme": theme,
 			})
 			if err != nil {
 				return ctx.Status(fiber.StatusInternalServerError).SendString("Internal Server Error")

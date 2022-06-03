@@ -14,5 +14,12 @@ func AboutHandler(c *fiber.Ctx) error {
 	c.Set("Permissions-Policy", "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()")
 	c.Set("Content-Security-Policy", "default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; font-src 'self'; form-action 'self'; block-all-mixed-content; manifest-src 'self'")
 
-	return c.Render("about", fiber.Map{})
+	theme := "light"
+	if c.Cookies("theme") != "" {
+		theme = c.Cookies("theme")
+	}
+
+	return c.Render("about", fiber.Map{
+		"theme": theme,
+	})
 }
