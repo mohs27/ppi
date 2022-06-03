@@ -14,6 +14,7 @@ function updateGeneralSetting(setting) {
     document.cookie = "nsfw=" + elem.checked + "; path=/; SameSite=Strict; max-age=2147483647"
   } else if (setting == "theme") {
     document.cookie = "theme=" + elem.value + "; path=/; SameSite=Strict; max-age=2147483647"
+    location.reload()
   } else {
     localStorage.setItem(setting, elem.checked)
   }
