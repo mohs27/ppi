@@ -14,6 +14,10 @@ label {
   align-items: center;
 }
 
+.sbSectionText {
+  margin-top: -0.75em;
+}
+
 .betaLabel {
   padding: 3px 5px;
   background-color: var(--accent);
