@@ -64,7 +64,7 @@ func ProcessText(text string, newline bool) string {
 		}
 
 		time := fmt.Sprint((hours * 60 * 60) + (mins * 60) + secs)
-		text = strings.ReplaceAll(text, match, `<a href="#`+time+`">`+match+"</a>")
+		text = strings.Replace(text, match, `<a href="#`+time+`">`+match+"</a>", 1)
 	}
 
 	text = ReplaceStickersAndEmotes(text)
