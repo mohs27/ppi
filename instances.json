@@ -31,6 +31,7 @@
     {
       "name": "librarian.esmailelbob.xyz",
       "url": "https://librarian.esmailelbob.xyz",
+      "onion": "http://librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
       "country": "🇨🇦 CA",
       "cloudflare": false,
       "live": false
@@ -38,6 +39,7 @@
     {
       "name": "lbry.vern.cc",
       "url": "https://lbry.vern.cc",
+      "onion": "http://lbry.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion",
       "country": "🇨🇦 CA",
       "cloudflare": false,
       "live": false
@@ -45,6 +47,7 @@
     {
       "name": "lbry.slipfox.xyz",
       "url": "https://lbry.slipfox.xyz",
+      "onion": "http://5znbzx2xcymhddzekfjib3isgqq4ilcyxa2bsq6vqmnvbtgu4f776lqd.onion",
       "country": "🇺🇸 US",
       "cloudflare": false,
       "live": false
@@ -59,6 +62,7 @@
     {
       "name": "lbry.webhop.me",
       "url": "https://lbry.webhop.me",
+      "onion": "http://zjmls4urccc5wxc64ilbv4oqarjab6pbanvmhd2qqt6p7fgqrjjnryqd.onion",
       "country": "🇨🇿 CZ",
       "cloudflare": false,
       "live": true
@@ -71,37 +75,10 @@
       "live": false
     },
     {
-      "name": "librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
-      "url": "http://librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
-      "country": "",
-      "cloudflare": false,
-      "live": false
-    },
-    {
-      "name": "lbry.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion",
-      "url": "http://lbry.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion",
-      "country": "",
-      "cloudflare": false,
-      "live": false
-    },
-    {
-      "name": "5znbzx2xcymhddzekfjib3isgqq4ilcyxa2bsq6vqmnvbtgu4f776lqd.onion",
-      "url": "http://5znbzx2xcymhddzekfjib3isgqq4ilcyxa2bsq6vqmnvbtgu4f776lqd.onion/",
-      "country": "",
-      "cloudflare": false,
-      "live": false
-    },
-    {
-      "name": "zjmls4urccc5wxc64ilbv4oqarjab6pbanvmhd2qqt6p7fgqrjjnryqd.onion",
-      "url": "http://zjmls4urccc5wxc64ilbv4oqarjab6pbanvmhd2qqt6p7fgqrjjnryqd.onion/",
-      "country": "",
-      "cloudflare": false,
-      "live": true
-    },
-    {
-      "name": "bxewpsswttslepw27w2hhxhlizwm7l7y54x3jw5cfrb64hb6lgc557ad.onion",
-      "url": "http://bxewpsswttslepw27w2hhxhlizwm7l7y54x3jw5cfrb64hb6lgc557ad.onion/",
-      "country": "",
+      "name": "lbry.ooguy.com",
+      "url": "https://lbry.ooguy.com",
+      "onion": "http://bxewpsswttslepw27w2hhxhlizwm7l7y54x3jw5cfrb64hb6lgc557ad.onion",
+      "country": "🇸🇰 SK",
       "cloudflare": false,
       "live": false
     }
