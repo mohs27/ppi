@@ -17,7 +17,7 @@ func ChannelHandler(c *fiber.Ctx) error {
 	c.Set("Referrer-Policy", "no-referrer")
 	c.Set("X-Content-Type-Options", "nosniff")
 	c.Set("Strict-Transport-Security", "max-age=31557600")
-	c.Set("Content-Security-Policy", "default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; form-action 'self'; block-all-mixed-content; manifest-src 'self'")
+	c.Set("Content-Security-Policy", "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; form-action 'self'; block-all-mixed-content; manifest-src 'self'")
 
 	page := 1
 	pageParam, err := strconv.Atoi(c.Query("page"))
