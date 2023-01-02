@@ -1,8 +1,6 @@
 package pages
 
 import (
-	"time"
-
 	"codeberg.org/librarian/librarian/api"
 	"codeberg.org/librarian/librarian/utils"
 	"github.com/gofiber/fiber/v2"
@@ -14,7 +12,6 @@ func ChannelRSSHandler(c *fiber.Ctx) error {
 	c.Set("Cache-Control", "public,max-age=1800")
 	c.Set("Content-Type", "application/rss+xml")
 
-	now := time.Now()
 	channel, err := api.GetChannel(c.Params("channel"))
 	if err != nil {
 		return err
@@ -40,7 +37,6 @@ func ChannelRSSHandler(c *fiber.Ctx) error {
 		Link:        &feeds.Link{Href: channel.Url},
 		Image:       &feeds.Image{Url: image},
 		Description: channel.DescriptionTxt,
-		Created:     now,
 	}
 
 	feed.Items = []*feeds.Item{}

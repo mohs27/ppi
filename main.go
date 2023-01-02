@@ -103,8 +103,7 @@ func main() {
 	})
 
 	app.Use(recover.New())
-
-	app.Use("/", etag.New())
+	app.Use(etag.New())
 	app.Use("/static", filesystem.New(filesystem.Config{
 		Next: func(c *fiber.Ctx) bool {
 			c.Response().Header.Add("Cache-Control", "public,max-age=2592000")
