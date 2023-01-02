@@ -41,10 +41,6 @@ video {
   width: 20%;
 }
 
-.videoDesc__claimId {
-  font-size: 12px;
-}
-
 .description p,
 .videoDesc__channel p,
 ul {
