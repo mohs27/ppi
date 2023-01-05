@@ -125,93 +125,9 @@ There is a script to redirect Odysee links to Librarian.
 ## Install
 Librarian can run on any platform Go compiles on, memory usage varies on instance usage due to caching.
 
-> Make sure to join our [Matrix chat](https://matrix.to/#/#librarian:nitro.chat) to get notified on updates for Odysee API changes.
+> Make sure to join our [Matrix chat](https://matrix.to/#/#librarian:nitro.chat) to get notified on updates for Odysee API changes or for support.
 
-> It is strongly recommended to use [Caddy](https://caddyserver.com/) as your reverse proxy especially if you have livestreams or video proxy enabled. Caddy is simple to configure, automatically manages your TLS certificates, and provides better performance with support for HTTP/2 and /3 (allow UDP port 443 in your firewall to use HTTP/3).
-
-### Docker (recommended)
-Install Docker and docker-compose, then clone this repository.
-```
-git clone https://codeberg.org/librarian/librarian
-cd librarian
-```
-
-Edit the config file using your preferred editor.
-```
-mkdir data
-cp config.example.yml data/config.yml
-nvim data/config.yml
-```
-You can also edit `docker-compose.yml` if you want to change ports or build from source.
-
-You can now run Librarian. 🎉
-```
-sudo docker-compose up -d
-```
-
-#### Automatic updates
-[Watchtower](https://containrrr.dev/watchtower/) can automatically update your Docker containers.
-
-Create a new `docker-compose.yml` file or add the watchtower section to your existing `docker-compose.yml` file.
-```yml
-version: "3"
-services:
-  watchtower:
-    image: containrrr/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-```
-
-### Build from source
-> For more detailed instructions, follow the [guide](https://codeberg.org/librarian/librarian/wiki/Setup-guide-%28manual%29).
-
-#### Requirements
-- Go v1.16 or later
-
-Clone the repository and `cd` into it.
-```
-git clone https://codeberg.org/librarian/librarian
-cd librarian
-```
-
-Build Librarian.
-```
-go build .
-```
-
-To include version information use:
-```
-go build -ldflags "-X codeberg.org/librarian/librarian/pages.VersionInfo=$(date '+%Y-%m-%d')-$(git rev-list --abbrev-commit -1 HEAD)"
-```
-
-Edit the config file using your preferred editor.
-```
-cp config.example.yml config.yml
-nvim config.yml
-```
-
-You can now run Librarian. 🎉
-```
-./librarian
-```
-
-### `go install`
-You can install Librarian using Go.
-```
-go install codeberg.org/librarian/librarian@latest
-```
-
-Edit the config file using your preferred editor.
-```
-cp config.example.yml config.yml
-nvim config.yml
-```
-
-You can now run Librarian. 🎉
-```
-librarian # If GOBIN is in your PATH
-$HOME/go/bin/librarian # If GOBIN is not in PATH
-```
+See https://librarian.codeberg.page/docs/getting-started/install/
 
 ## Configuration
 See [config.example.yml](./config.example.yml) for configuration.
