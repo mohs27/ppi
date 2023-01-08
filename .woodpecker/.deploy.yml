@@ -3,7 +3,7 @@ pipeline:
     image: codeberg.org/video-prize-ranch/fly-deploy:latest
     commands:
       - git clone https://codeberg.org/video-prize-ranch/fly-cfg.git
-      - cd fly-cfg/librarian
+      - cd fly-cfg/frontends-1
       - flyctl deploy --detach
     secrets: [fly_api_token]
 
