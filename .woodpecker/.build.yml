@@ -1,14 +1,10 @@
 pipeline:
   build:
-    image: woodpeckerci/plugin-docker-buildx
-    settings:
-      dockerfile: Dockerfile
-      registry: https://codeberg.org/v2
-      repo: codeberg.org/librarian/librarian
-      platforms: linux/amd64,linux/arm64
-      tag: latest
-      username:
-        from_secret: docker_username
-      password:
-        from_secret: docker_password
+    image: quay.io/podman/stable
+    commands:
+      - podman manifest create multiarch-tmp
+      - podman build --tag codeberg.org/librarian/librarian:latest --manifest multiarch-tmp --platform linux/amd64 .
+      - podman build --tag codeberg.org/librarian/librarian:latest --manifest multiarch-tmp --platform linux/arm64 .
+      - podman login codeberg.org --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+      - podman manifest push --all multiarch-tmp "docker://codeberg.org/librarian/librarian:latest"
     secrets: [docker_username, docker_password]
