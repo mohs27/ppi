@@ -33,13 +33,18 @@ func CategoryHandler(c *fiber.Ctx) error {
 	if err != nil {
 		return err
 	}
+	
+	theme := viper.GetString("DEFAULT_SETTINGS.theme")
+	if c.Cookies("theme") != "" {
+		theme = c.Cookies("theme")
+	}
 
 	return c.Render("category", fiber.Map{
 		"config":     viper.AllSettings(),
 		"category":   categories[categoryName],
 		"categories": categoriesArr,
 		"claims":     claims,
-		"theme":      c.Cookies("theme"),
+		"theme":      theme,
 	})
 }
 

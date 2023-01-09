@@ -19,6 +19,11 @@ func ChannelHandler(c *fiber.Ctx) error {
 	c.Set("Strict-Transport-Security", "max-age=31557600")
 	c.Set("Content-Security-Policy", "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; form-action 'self'; block-all-mixed-content; manifest-src 'self'")
 
+	theme := viper.GetString("DEFAULT_SETTINGS.theme")
+	if c.Cookies("theme") != "" {
+		theme = c.Cookies("theme")
+	}
+	
 	page := 1
 	pageParam, err := strconv.Atoi(c.Query("page"))
 	if err == nil || pageParam != 0 {
@@ -51,7 +56,7 @@ func ChannelHandler(c *fiber.Ctx) error {
 		"channel": channel,
 		"config":  viper.AllSettings(),
 		"claims":  claims,
-		"theme":   c.Cookies("theme"),
+		"theme":   theme,
 		"query": fiber.Map{
 			"page":        fmt.Sprint(page),
 			"prevPageIs0": (page - 1) == 0,

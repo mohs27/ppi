@@ -1,10 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const video = document.querySelector('video');
   const source = video.getElementsByTagName("source")[0].src;
 
+  let res = await fetch("/api/v1/settings")
+  let defaults = await res.json()
+
   const defaultOptions = {
     keyboard: { focused: true, global: true },
-    autoplay: localStorage.getItem("autoplay") === "true" ? true : false
+    speed: {
+      selected: defaults.speed
+    }
   };
 
   // Preview thumbnails
@@ -36,15 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
       }
     });
-
-    if (localStorage.getItem("autoplayNextVid")) {
-      let nextVid = document.getElementsByClassName("relVid__link")
-      nextVid = nextVid[0].getAttribute("href")
-
-      player.on('ended', () => {
-        window.location.href = nextVid
-      })
-    }
   } else {
     // For more Hls.js options, see https://github.com/dailymotion/hls.js
     const hls = new Hls();
@@ -61,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Add new qualities to option
       defaultOptions.quality = {
-        default: 0, //Default - AUTO
+        default: defaults.quality, //Default - AUTO
         options: availableQualities,
         forced: true,
         onChange: (e) => updateQuality(e),
@@ -101,19 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             break;
         }
       });
-
-      if (localStorage.getItem("autoplay") === "true") {
-        player.on('ready', player.play())
-      }
-
-      if (localStorage.getItem("autoplayNextVid")) {
-        let nextVid = document.getElementsByClassName("relVid__link")
-        nextVid = nextVid[0].getAttribute("href")
-
-        player.on('ended', () => {
-          window.location.href = nextVid
-        })
-      }
 
       if (location.hash) {
         player.on('loadeddata', () => { player.currentTime = location.hash.replace("#", "") * 1 })

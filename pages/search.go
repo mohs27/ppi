@@ -8,6 +8,7 @@ import (
 
 	"codeberg.org/librarian/librarian/api"
 	"github.com/gofiber/fiber/v2"
+	"github.com/spf13/viper"
 )
 
 func SearchHandler(c *fiber.Ctx) error {
@@ -19,6 +20,11 @@ func SearchHandler(c *fiber.Ctx) error {
 	c.Set("Strict-Transport-Security", "max-age=31557600")
 	c.Set("Content-Security-Policy", "default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; form-action 'self'; block-all-mixed-content; manifest-src 'self'")
 
+	theme := viper.GetString("DEFAULT_SETTINGS.theme")
+	if c.Cookies("theme") != "" {
+		theme = c.Cookies("theme")
+	}
+	
 	page := 1
 	pageParam, err := strconv.Atoi(c.Query("page"))
 	if err == nil || pageParam != 0 {
@@ -38,7 +44,7 @@ func SearchHandler(c *fiber.Ctx) error {
 		return c.Render("search", fiber.Map{
 			"results":   nil,
 			"lenUnder3": true,
-			"theme":     c.Cookies("theme"),
+			"theme":     theme,
 			"query": fiber.Map{
 				"query": query,
 			},
@@ -60,7 +66,7 @@ func SearchHandler(c *fiber.Ctx) error {
 
 	return c.Render("search", fiber.Map{
 		"results": results,
-		"theme":   c.Cookies("theme"),
+		"theme":   theme,
 		"query": fiber.Map{
 			"query":       query,
 			"page":        fmt.Sprint(page),

@@ -19,11 +19,24 @@ func ClaimHandler(c *fiber.Ctx) error {
 	c.Set("Strict-Transport-Security", "max-age=31557600")
 	c.Set("Content-Security-Policy", "default-src 'self'; script-src blob: 'self'; connect-src *; media-src * data: blob:; block-all-mixed-content")
 
-	theme := c.Cookies("theme")
+	theme := viper.GetString("DEFAULT_SETTINGS.theme")
+	if c.Cookies("theme") != "" {
+		theme = c.Cookies("theme")
+	}
+	showRelated := viper.GetString("DEFAULT_SETTINGS.showRelated")
+	if c.Cookies("showRelated") != "" {
+		showRelated = c.Cookies("showRelated")
+	}
+	autoplay := viper.GetString("DEFAULT_SETTINGS.autoplay")
+	if c.Cookies("autoplay") != "" {
+		autoplay = c.Cookies("autoplay")
+	}
 	nojs := c.Query("nojs") == "1"
 	settings := fiber.Map{
 		"theme": theme,
 		"nojs":  nojs,
+		"showRelated": showRelated,
+		"autoplay": autoplay,
 	}
 
 	claimData, err := api.GetClaim("lbry://" + c.Params("channel") + "/" + c.Params("claim"))

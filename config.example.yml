@@ -32,6 +32,22 @@ FRONTEND:
   instagram: ''
   tiktok: ''
   reddit: ''
+# Default instance settings
+DEFAULT_SETTINGS:
+  theme: 'dark' # system, light, dark
+  relatedVideos: true
+  nsfw: false
+  autoplay: false
+  speed: '1' # 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 4
+  quality: '0' # 0 - Auto, 144 - 144p, 360 - 360p, 720 - 720p, 1080 - 1080p
+  sponsorblock:
+    sponsor: true
+    selfpromo: true
+    interaction: true
+    intro: false
+    outro: false
+    preview: false
+    filler_tangent: false
 # Instance privacy: This is required to get your instance listed. For more info,
 # See: https://codeberg.org/librarian/librarian/wiki/Instance-privacy
 INSTANCE_PRIVACY:

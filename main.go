@@ -89,10 +89,15 @@ func main() {
 
 			errString := strings.ReplaceAll(err.Error(), "\n", "<br>")
 			errString = bluemonday.UGCPolicy().Sanitize(errString)
+			
+			theme := viper.GetString("DEFAULT_SETTINGS.theme")
+			if ctx.Cookies("theme") != "" {
+				theme = ctx.Cookies("theme")
+			}
 
 			err = ctx.Status(code).Render("error", fiber.Map{
 				"err": errString,
-				"theme": ctx.Cookies("theme"),
+				"theme": theme,
 			})
 			if err != nil {
 				return ctx.Status(fiber.StatusInternalServerError).SendString("Internal Server Error")
@@ -151,6 +156,7 @@ func main() {
 	app.Get("/api/sponsorblock/:id", proxy.ProxySponsorBlock)
 	app.Get("/api/v1/category/:category", pages.CategoryApiHandler)
 	app.Get("/api/v1/channel/:channel", pages.ChannelApiHandler)
+	app.Get("/api/v1/settings", pages.DefaultSettingsHandler)
 
 	app.Get("/$/invite/:channel", pages.ChannelHandler)
 	app.Get("/$/rss/:channel", pages.ChannelRSSHandler)
