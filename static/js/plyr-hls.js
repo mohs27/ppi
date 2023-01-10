@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const video = document.querySelector('video');
-  const source = video.getElementsByTagName("source")[0].src;
-
   let res = await fetch("/api/v1/settings")
   let defaults = await res.json()
 
@@ -11,6 +8,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       selected: defaults.speed
     }
   };
+  
+  const video = document.querySelector('video');
+  const source = video.getElementsByTagName("source")[0].src;
 
   // Preview thumbnails
   if (!document.getElementById("isLive")) {

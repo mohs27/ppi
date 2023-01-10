@@ -81,7 +81,7 @@ func checkStream(url string) (Stream, error) {
 	return Stream{
 		Type:        res.Header.Get("Content-Type"),
 		URL:         res.Request.URL.String(),
-		FallbackURL: url + "?download=1",
+		FallbackURL: url,
 		HLS:         isHls,
 	}, nil
 }
