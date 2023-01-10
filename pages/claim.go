@@ -109,6 +109,7 @@ func ClaimHandler(c *fiber.Ctx) error {
 			return err
 		}
 		stream.URL = "/stream" + strUrl.Path
+		stream.FallbackURL = strings.ReplaceAll(stream.FallbackURL, "https://player.odycdn.com", "/stream")
 	}
 
 	comments := api.Comments{}
