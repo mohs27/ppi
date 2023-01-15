@@ -86,7 +86,6 @@ Open an issue to have your instance listed here!
 
 | URL                                                             | Country      | Provider         | Privacy               | Livestreams | Notes |
 | :-------------------------------------------------------------- | :----------- | :--------------- | :-------------------- | :---------- | :---- |
-| [lbry.bcow.xyz](https://lbry.bcow.xyz) (official)               | 🇳🇱 NL        | Fly.io           | ⚠️ Data collected     | ✅️ |  |
 | [odysee.076.ne.jp](https://odysee.076.ne.jp)                    | 🇯🇵 JP        | GMOグローバルサイン | ✅ Data not collected | ✅️ | [Edited source code](https://git.076.ne.jp/TechnicalSuwako/Librarian-mod) |
 | [librarian.pussthecat.org](https://librarian.pussthecat.org/)   | 🇩🇪 DE        | Hetzner          | ⚠️ Data collected     | ✅️ |  |
 | [lbry.projectsegfau.lt](https://lbry.projectsegfau.lt/)         | 🇳🇱 NL        | BuyVM            | ✅ Data not collected | ✅️ |  |
@@ -95,6 +94,8 @@ Open an issue to have your instance listed here!
 | [lbry.slipfox.xyz](https://lbry.slipfox.xyz)                    | 🇺🇸 US        | Hetzner          | ✅ Data not collected | ❌️ |  |
 | [lbry.mywire.org](https://lbry.mywire.org)                      | 🇷🇺 RU        | justhost.ru      | ✅ Data not collected | ❌️ |  |
 | [lbry.ooguy.com](https://lbry.ooguy.com)                        | 🇸🇰 SK        | STARK INDUSTRIES | ✅ Data not collected | ❌️ |  |
+| [lbn.frail.duckdns.org](https://lbn.frail.duckdns.org/)         | 🇧🇷 BR        | WSNET TELECOM    | ✅ Data not collected | ✅️ |  |
+ 
  
 ### Tor
 

@@ -1,13 +1,6 @@
 {
   "instances": [
     {
-      "name": "lbry.bcow.xyz",
-      "url": "https://lbry.bcow.xyz",
-      "country": "🇳🇱 NL",
-      "cloudflare": false,
-      "live": true
-    },
-    {
       "name": "odysee.076.ne.jp",
       "url": "https://odysee.076.ne.jp",
       "country": "🇯🇵 JP",
@@ -55,6 +48,20 @@
       "country": "🇷🇺 RU",
       "cloudflare": false,
       "live": false
+    },
+    {
+      "name": "lbry.ooguy.com",
+      "url": "https://lbry.ooguy.com",
+      "country": "🇸🇰 SK",
+      "cloudflare": false,
+      "live": false
+    },
+    {
+      "name": "lbn.frail.duckdns.org",
+      "url": "https://lbn.frail.duckdns.org",
+      "country": "🇧🇷 BR",
+      "cloudflare": false,
+      "live": true
     },
     {
       "name": "librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
