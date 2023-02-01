@@ -3,11 +3,10 @@
 # librarian
 An alternative frontend for Odysee (previous LBRY). Inspired by [Invidious](https://github.com/iv-org/invidious) and [Libreddit](https://github.com/spikecodes/libreddit).
 
-## support privacy and LBRY
+## Support privacy and LBRY
 
 Since LBRY has a lot of problems they made a comnpromisses in order to support the network.
-We aknoledge their intent to keep the service alive and promote the usage of LBRY Application,
-where you can help to host content and support the peer to peer nature of this platform. 
+We acknowledge their intent to keep the service alive and promote the usage of LBRY Application, where you can help to host content and support the peer to peer nature of this platform. 
 
 When uing Odysee with an Adblocker or using Librarian you are not supporting the network!
 Please keep it in mind, since we do not seek to cause more damage but to support.
