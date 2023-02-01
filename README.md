@@ -5,7 +5,7 @@ An alternative frontend for Odysee (previous LBRY). Inspired by [Invidious](http
 
 ## Support privacy and LBRY
 
-Since LBRY has a lot of problems they made a compromises in order to support the network.
+Since LBRY has a lot of problems they made compromises in order to support the network.
 We acknowledge their intent to keep the service alive and promote the usage of LBRY Application, where you can help to host content and support the peer to peer nature of this platform. 
 
 When uing Odysee with an Adblocker or using Librarian you are not supporting the network!
