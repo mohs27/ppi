@@ -15,9 +15,9 @@ func HandleStream(c *fiber.Ctx) error {
 		return err
 	}
 
-	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0")
-	req.Header.Set("Origin", "https://odysee.com/")
-	req.Header.Set("Referer", "https://odysee.com/")
+	req.Header.Set("Accept", "*/*")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/109.0")
+	req.Header.Set("Origin", "https://odysee.com")
 	if c.Get("Range") != "" {
 		req.Header.Set("Range", c.Get("Range"))
 	}
@@ -36,7 +36,7 @@ func HandleStream(c *fiber.Ctx) error {
 	if res.Header.Get("Content-Range") != "" {
 		c.Set("Content-Range", res.Header.Get("Content-Range"))
 	}
-	if res.Header.Get("Content-Type") == "application/x-mpegurl" && !strings.HasSuffix(c.Path(), ".m3u8") {
+	if res.Header.Get("Location") != "" {
 		c.Set("Location", strings.ReplaceAll(res.Request.URL.String(), "https://player.odycdn.com", "/stream"))
 		res.StatusCode = 308
 	}

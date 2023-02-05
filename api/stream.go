@@ -68,7 +68,22 @@ func GetStream(video string) (Stream, error) {
 }
 
 func checkStream(url string) (Stream, error) {
-	res, err := http.Head(url)
+	req, err := http.NewRequest("HEAD", url, nil)
+	if err != nil {
+		return Stream{}, err
+	}
+
+	req.Header.Set("Accept-Language", "en-US,en;q=0.5")
+	req.Header.Set("Cache-Control", "no-cache")
+	req.Header.Set("Pragma", "no-cache")
+	req.Header.Set("DNT", "1")
+	req.Header.Set("Origin", "https://odysee.com")
+	req.Header.Set("Sec-Fetch-Dest", "empty")
+	req.Header.Set("Sec-Fetch-Mode", "cors")
+	req.Header.Set("Sec-Fetch-Site", "same-site")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/109.0")
+
+	res, err := http.DefaultClient.Do(req)
 	if err != nil {
 		return Stream{}, err
 	}
@@ -76,12 +91,11 @@ func checkStream(url string) (Stream, error) {
 	if res.StatusCode == 403 {
 		return Stream{}, fmt.Errorf("this content cannot be accessed due to a DMCA request")
 	}
-
-	isHls := res.Header.Get("Content-Type") == "application/x-mpegurl"
+	
 	return Stream{
 		Type:        res.Header.Get("Content-Type"),
 		URL:         res.Request.URL.String(),
 		FallbackURL: url,
-		HLS:         isHls,
+		HLS: res.Header.Get("Content-Type") == "application/x-mpegurl",
 	}, nil
 }

@@ -108,7 +108,16 @@ func main() {
 	})
 
 	app.Use(recover.New())
-	app.Use(etag.New())
+	app.Use(etag.New(etag.Config{
+		Next: func(c *fiber.Ctx) bool {
+			if strings.HasPrefix(c.Path(), "/stream") || strings.HasPrefix(c.Path(), "/live") {
+				return true
+			} else {
+				return false
+			}
+		},
+    Weak: true,
+	}))
 	app.Use("/static", filesystem.New(filesystem.Config{
 		Next: func(c *fiber.Ctx) bool {
 			c.Response().Header.Add("Cache-Control", "public,max-age=2592000")
