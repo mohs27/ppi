@@ -82,26 +82,27 @@ Librarian itself does not collect any data but instance operators may collect da
 
 Open an issue to have your instance listed here!
 
+⭐ Instances with a star don't collect data, don't use Cloudflare, support livestreams, and proxy videos.
+
 ### Clearnet
 
-| URL                                                             | Country      | Provider         | Privacy               | Livestreams | Notes |
-| :-------------------------------------------------------------- | :----------- | :--------------- | :-------------------- | :---------- | :---- |
-| [odysee.076.ne.jp](https://odysee.076.ne.jp)                    | 🇯🇵 JP        | GMOグローバルサイン | ✅ Data not collected | ✅️ | [Edited source code](https://git.076.ne.jp/TechnicalSuwako/Librarian-mod) |
-| [librarian.pussthecat.org](https://librarian.pussthecat.org/)   | 🇩🇪 DE        | Hetzner          | ⚠️ Data collected     | ✅️ |  |
-| [lbry.projectsegfau.lt](https://lbry.projectsegfau.lt/)         | 🇳🇱 NL        | BuyVM            | ✅ Data not collected | ✅️ |  |
-| [librarian.esmailelbob.xyz](https://librarian.esmailelbob.xyz/) | 🇨🇦 CA        | OVH              | ✅ Data not collected | ✅️ |  |
-| [lbry.vern.cc](https://lbry.vern.cc/)                           | 🇺🇸 US        | OVHCloud         | ✅ Data not collected | ❌️ | [Edited theme](https://git.vern.cc/root/modifications/src/branch/master/librarian) |
-| [lbry.slipfox.xyz](https://lbry.slipfox.xyz)                    | 🇺🇸 US        | Hetzner          | ✅ Data not collected | ❌️ |  |
-| [lbry.mywire.org](https://lbry.mywire.org)                      | 🇷🇺 RU        | justhost.ru      | ✅ Data not collected | ❌️ |  |
-| [lbry.ooguy.com](https://lbry.ooguy.com)                        | 🇸🇰 SK        | STARK INDUSTRIES | ✅ Data not collected | ❌️ |  |
-| [lbn.frail.duckdns.org](https://lbn.frail.duckdns.org/)         | 🇧🇷 BR        | WSNET TELECOM    | ✅ Data not collected | ✅️ |  |
- 
- 
+| URL                                                             | Country      | Provider         | Privacy               | Livestreams | Proxy | Notes |
+| :-------------------------------------------------------------- | :----------- | :--------------- | :-------------------- | :---------- | :---- | :---- |
+| [odysee.076.ne.jp](https://odysee.076.ne.jp)                    | 🇯🇵 JP        | GMOグローバルサイン | ✅ Data not collected | ✅️ | ❌️ | [Edited theme](https://git.076.ne.jp/TechnicalSuwako/Librarian-mod) |
+| [librarian.pussthecat.org](https://librarian.pussthecat.org/)   | 🇩🇪 DE        | Hetzner          | ⚠️ Data collected     | ✅️ | ✅️ |  |
+| ⭐ [lbry.projectsegfau.lt](https://lbry.projectsegfau.lt/)         | 🇳🇱 NL     | BuyVM            | ✅ Data not collected | ✅️ | ✅️ |  |
+| ⭐ [librarian.esmailelbob.xyz](https://librarian.esmailelbob.xyz/) | 🇨🇦 CA     | OVH              | ✅ Data not collected | ✅️ | ✅️ |
+| [lbry.vern.cc](https://lbry.vern.cc/)                           | 🇺🇸 US        | OVHCloud         | ✅ Data not collected | ❌️ | ❌️ |[Edited theme](https://git.vern.cc/root/modifications/src/branch/master/librarian) |
+| [lbry.slipfox.xyz](https://lbry.slipfox.xyz)                    | 🇺🇸 US        | Hetzner          | ✅ Data not collected | ❌️ | ❌️ |
+| [lbry.mywire.org](https://lbry.mywire.org)                      | 🇷🇺 RU        | justhost.ru      | ✅ Data not collected | ❌️ | ❌️ |
+| [lbry.ooguy.com](https://lbry.ooguy.com)                        | 🇸🇰 SK        | STARK INDUSTRIES | ✅ Data not collected | ❌️ | ❌️ |
+| [lbn.frail.duckdns.org](https://lbn.frail.duckdns.org/)         | 🇧🇷 BR        | WSNET TELECOM    | ✅ Data not collected | ✅️ | ❌️ |
+
 ### Tor
 
 | URL | Privacy               | Live streams | Notes |
 | :-- | :-------------------- | :----------- | :---- |
-| [librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion](http://librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion/) | ✅ Data not collected | ✅️ | Onion of librarian.esmailelbob.xyz |
+| ⭐ [librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion](http://librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion/) | ✅ Data not collected | ✅️ | Onion of librarian.esmailelbob.xyz |
 | [lbry.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion](http://lbry.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/) | ✅ Data not collected | ❌️ | Onion of lbry.vern.cc. [Edited theme](https://git.vern.cc/root/modifications/src/branch/master/librarian) |
 | [5znbzx2xcymhddzekfjib3isgqq4ilcyxa2bsq6vqmnvbtgu4f776lqd.onion](http://5znbzx2xcymhddzekfjib3isgqq4ilcyxa2bsq6vqmnvbtgu4f776lqd.onion/) | ✅ Data not collected | ❌️ | Onion of lbry.slipfox.xyz |
 | [bxewpsswttslepw27w2hhxhlizwm7l7y54x3jw5cfrb64hb6lgc557ad.onion](http://bxewpsswttslepw27w2hhxhlizwm7l7y54x3jw5cfrb64hb6lgc557ad.onion/) | ✅ Data not collected | ❌️ | Onion of lbry.ooguy.com |
