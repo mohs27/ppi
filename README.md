@@ -1,3 +1,6 @@
+> **Notice:**
+> The developers of Librarian do not in any way endorse or control the content on Odysee. Librarian does NOT allow posting content to Odysee.
+
 <img src="https://codeberg.org/librarian/librarian/raw/branch/main/static/img/librarian.svg" width="96" height="96" />
 
 # librarian
