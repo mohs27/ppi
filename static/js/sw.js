@@ -15,7 +15,6 @@ const files = [
   '/static/css/video.css',
   '/static/img/librarian.svg',
   '/static/img/plyr.svg',
-  '/static/img/spaceman.png',
   '/static/favicon/android-chrome-192x192.png',
   '/static/favicon/android-chrome-512x512.png',
   '/static/favicon/apple-touch-icon.png',

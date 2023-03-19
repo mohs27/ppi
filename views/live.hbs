@@ -38,12 +38,8 @@
       </video>
     </div>
     {{else}}
-    <img src="/static/img/odysee-streaming-png 2.webp" width="100%">
-    {{/if}}
-
-    {{#unless live.Live}}
     <p class="streamOffline">{{claim.Channel.Name}} isn't live right now. Check back later.</p>
-    {{/unless}}
+    {{/if}}
 
     <noscript><br>⚠️ JavaScript is required to play livestreams.</noscript>
     <h2>{{claim.Title}}</h2>

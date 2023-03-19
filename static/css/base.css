@@ -118,6 +118,7 @@ main {
 
 .pfp--default {
   background-color: var(--accent);
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .thumbnailWrapper {

@@ -37,7 +37,7 @@ function generateCommentElem(comment) {
   let pfpElem = document.createElement('img')
   let pfp = comment.Channel.Thumbnail
   pfpElem.className = !pfp ? "pfp pfp--default" : "pfp"
-  pfpElem.src = !pfp ? "/static/img/spaceman.webp" : pfp + "&w=48&h=48"
+  pfpElem.src = !pfp ? "/static/img/default-profile.svg" : pfp + "&w=48&h=48"
   pfpElem.width = 48
   pfpElem.height = 48
   pfpElem.loading = "lazy"
