@@ -37,3 +37,7 @@ code {
   background-color: #616161 !important;
   color: white !important;
 }
+
+.warningBox {
+  color: #000;
+}
