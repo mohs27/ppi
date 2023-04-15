@@ -93,7 +93,10 @@ Open an issue to have your instance listed here!
 | :-------------------------------------------------------------- | :----------- | :--------------- | :-------------------- | :---------- | :---- | :---- |
 | [odysee.076.ne.jp](https://odysee.076.ne.jp)                    | 🇯🇵 JP        | GMOグローバルサイン | ✅ Data not collected | ✅️ | ❌️ | [Edited theme](https://git.076.ne.jp/TechnicalSuwako/Librarian-mod) |
 | [librarian.pussthecat.org](https://librarian.pussthecat.org/)   | 🇩🇪 DE        | Hetzner          | ⚠️ Data collected     | ✅️ | ✅️ |  |
-| ⭐ [lbry.projectsegfau.lt](https://lbry.projectsegfau.lt/)         | 🇳🇱 NL     | BuyVM            | ✅ Data not collected | ✅️ | ✅️ |  |
+| [lbry.projectsegfau.lt](https://lbry.projectsegfau.lt/)         | 🇱🇺 LU, 🇺🇸 US, 🇮🇳 IN | See below | ✅ Data not collected | ✅️ | -  |  |
+| [lbry.us.projectsegfau.lt](https://lbry.us.projectsegfau.lt/)   | 🇺🇸 US | DigitalOcean            | ✅ Data not collected | ✅️ | ❌️ |  |
+| ⭐ [lbry.eu.projectsegfau.lt](https://lbry.eu.projectsegfau.lt/)| 🇱🇺 LU | FranTech Solutions      | ✅ Data not collected | ✅️ | ✅️ |  |
+| [lbry.in.projectsegfau.lt](https://lbry.in.projectsegfau.lt/)   | 🇮🇳 IN | Airtel                  | ✅ Data not collected | ✅️ | ❌️ |  |
 | ⭐ [librarian.esmailelbob.xyz](https://librarian.esmailelbob.xyz/) | 🇨🇦 CA     | OVH              | ✅ Data not collected | ✅️ | ✅️ |
 | [lbry.vern.cc](https://lbry.vern.cc/)                           | 🇺🇸 US        | OVHCloud         | ✅ Data not collected | ❌️ | ❌️ |[Edited theme](https://git.vern.cc/root/modifications/src/branch/master/librarian) |
 | [lbry.slipfox.xyz](https://lbry.slipfox.xyz)                    | 🇺🇸 US        | Hetzner          | ✅ Data not collected | ❌️ | ❌️ |
@@ -109,6 +112,13 @@ Open an issue to have your instance listed here!
 | [lbry.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion](http://lbry.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/) | ✅ Data not collected | ❌️ | Onion of lbry.vern.cc. [Edited theme](https://git.vern.cc/root/modifications/src/branch/master/librarian) |
 | [5znbzx2xcymhddzekfjib3isgqq4ilcyxa2bsq6vqmnvbtgu4f776lqd.onion](http://5znbzx2xcymhddzekfjib3isgqq4ilcyxa2bsq6vqmnvbtgu4f776lqd.onion/) | ✅ Data not collected | ❌️ | Onion of lbry.slipfox.xyz |
 | [bxewpsswttslepw27w2hhxhlizwm7l7y54x3jw5cfrb64hb6lgc557ad.onion](http://bxewpsswttslepw27w2hhxhlizwm7l7y54x3jw5cfrb64hb6lgc557ad.onion/) | ✅ Data not collected | ❌️ | Onion of lbry.ooguy.com |
+| ⭐ [lbry.pjsfkvpxlinjamtawaksbnnaqs2fc2mtvmozrzckxh7f3kis6yea25ad.onion](http://lbry.pjsfkvpxlinjamtawaksbnnaqs2fc2mtvmozrzckxh7f3kis6yea25ad.onion/) | ✅ Data not collected | ✅️ | Onion of lbry.eu.projectsegfau.lt |
+
+### I2P
+
+| URL | Privacy               | Live streams | Notes |
+| :-- | :-------------------- | :----------- | :---- |
+| ⭐ [pjsf7uucpqf2crcmfo3nvwdmjhirxxjfyuvibdfp5x3af2ghqnaa.b32.i2p](http://pjsf7uucpqf2crcmfo3nvwdmjhirxxjfyuvibdfp5x3af2ghqnaa.b32.i2p/) | ✅ Data not collected | ✅️ | lbry.eu.projectsegfau.lt on I2P |
 
 ### Automatically redirect links
 
