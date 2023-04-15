@@ -38,6 +38,7 @@ func DefaultSettingsHandler(c *fiber.Ctx) error {
 		"autoplay": false,
 		"speed": "1",
 		"quality": "0",
+		"commentWarning": true,
 		"sponsorblock": fiber.Map{
 			"sponsor": true,
 			"selfpromo": true,
@@ -49,6 +50,8 @@ func DefaultSettingsHandler(c *fiber.Ctx) error {
 		},
 	})
 	}
+
+	viper.SetDefault("DEFAULT_SETTINGS.commentWarning", true)
 		
 	return c.JSON(fiber.Map{
 		"theme": viper.GetString("DEFAULT_SETTINGS.theme"),
@@ -57,6 +60,7 @@ func DefaultSettingsHandler(c *fiber.Ctx) error {
 		"autoplay": viper.GetBool("DEFAULT_SETTINGS.autoplay"),
 		"speed": viper.GetString("DEFAULT_SETTINGS.speed"),
 		"quality": viper.GetString("DEFAULT_SETTINGS.quality"),
+		"commentWarning": viper.GetBool("DEFAULT_SETTINGS.commentWarning"),
 		"sponsorblock": fiber.Map{
 			"sponsor": viper.GetBool("DEFAULT_SETTINGS.sponsorblock.sponsor"),
 			"selfpromo": viper.GetBool("DEFAULT_SETTINGS.sponsorblock.selfpromo"),

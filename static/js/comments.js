@@ -133,15 +133,40 @@ function loadMoreBtn(page, sortBy) {
   })
 }
 
-const commentWarningBtn = document.getElementById('commentWarningBtn')
-commentWarningBtn.removeAttribute('href')
-commentWarningBtn.addEventListener('click', () => {
-  document.getElementById('commentsWarning').style.display = 'none';
-  document.querySelectorAll('.sortBtn--warningActive').forEach(elem => {
-    elem.classList.remove('sortBtn--warningActive')
-  })
-  comments(commentData.claimId, commentData.channelId, commentData.channelName, 1)
-})
+function getCookie(name) {
+  let cookies = document.cookie.split("; ");
+  let cookie = cookies.filter(cookie => cookie.includes(name))[0]
+  return cookie ? cookie.split("=")[1] : "";
+}
+
+function setCookie(name, data) {
+  document.cookie = `${name}=${data}; path=/; SameSite=Strict; max-age=2147483647`
+}
+
+async function commentWarning() {
+  let res = await fetch("/api/v1/settings")
+  let defaults = await res.json()
+
+  if (getCookie('commentWarning') === 'false' || !defaults.commentWarning) {
+    document.getElementById('commentsWarning').style.display = 'none';
+    document.querySelectorAll('.sortBtn--warningActive').forEach(elem => {
+      elem.classList.remove('sortBtn--warningActive')
+    })
+    comments(commentData.claimId, commentData.channelId, commentData.channelName, 1)
+  } else {
+    const commentWarningBtn = document.getElementById('commentWarningBtn')
+    commentWarningBtn.removeAttribute('href')
+    commentWarningBtn.addEventListener('click', () => {
+    document.getElementById('commentsWarning').style.display = 'none';
+      document.querySelectorAll('.sortBtn--warningActive').forEach(elem => {
+        elem.classList.remove('sortBtn--warningActive')
+      })
+      setCookie('commentWarning', 'false')
+      comments(commentData.claimId, commentData.channelId, commentData.channelName, 1)
+    })
+  }
+}
+commentWarning()
 
 const bestSortBtn = document.getElementById('bestSortBtn')
 const controversialSortBtn = document.getElementById('controversialSortBtn')

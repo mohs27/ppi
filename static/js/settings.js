@@ -3,6 +3,7 @@ const cookieSettings = [
   { name: "showRelated", type: "switch", user: null, default: null },
   { name: "nsfw", type: "switch", user: null, default: null },
   { name: "autoplay", type: "switch", user: null, default: null },
+  { name: "commentWarning", type: "switch", user: null, default: null },
 ]
 const sbCategories = ["sponsor", "selfpromo", "interaction", "intro", "outro", "preview", "filler"]
 
@@ -83,7 +84,7 @@ function applySetting(name, type, data) {
   let elem = document.getElementById(name)
   switch (type) {
     case "switch":
-      elem.checked = data
+      elem.checked = data === 'true' ? true : false
       break;
     case "select":
       elem.value = data
