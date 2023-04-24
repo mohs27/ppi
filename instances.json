@@ -64,6 +64,13 @@
       "live": true
     },
     {
+      "name": "lbry.ramondia.net",
+      "url": "https://lbry.ramondia.net",
+      "country": "🇩🇪 DE",
+      "cloudflare": true,
+      "live": true
+    },
+    {
       "name": "librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
       "url": "http://librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
       "country": "",

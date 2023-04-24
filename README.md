@@ -99,10 +99,11 @@ Open an issue to have your instance listed here!
 | [lbry.in.projectsegfau.lt](https://lbry.in.projectsegfau.lt/)   | 🇮🇳 IN | Airtel                  | ✅ Data not collected | ✅️ | ❌️ |  |
 | ⭐ [librarian.esmailelbob.xyz](https://librarian.esmailelbob.xyz/) | 🇨🇦 CA     | OVH              | ✅ Data not collected | ✅️ | ✅️ |
 | [lbry.vern.cc](https://lbry.vern.cc/)                           | 🇺🇸 US        | OVHCloud         | ✅ Data not collected | ❌️ | ❌️ |[Edited theme](https://git.vern.cc/root/modifications/src/branch/master/librarian) |
-| [lbry.slipfox.xyz](https://lbry.slipfox.xyz)                    | 🇺🇸 US        | Hetzner          | ✅ Data not collected | ❌️ | ❌️ |
-| [lbry.mywire.org](https://lbry.mywire.org)                      | 🇷🇺 RU        | justhost.ru      | ✅ Data not collected | ❌️ | ❌️ |
-| [lbry.ooguy.com](https://lbry.ooguy.com)                        | 🇸🇰 SK        | STARK INDUSTRIES | ✅ Data not collected | ❌️ | ❌️ |
-| [lbn.frail.duckdns.org](https://lbn.frail.duckdns.org/)         | 🇧🇷 BR        | WSNET TELECOM    | ✅ Data not collected | ✅️ | ❌️ |
+| [lbry.slipfox.xyz](https://lbry.slipfox.xyz)                    | 🇺🇸 US        | Hetzner          | ✅ Data not collected | ❌️ | ❌️ |  |
+| [lbry.mywire.org](https://lbry.mywire.org)                      | 🇷🇺 RU        | justhost.ru      | ✅ Data not collected | ❌️ | ❌️ |  |
+| [lbry.ooguy.com](https://lbry.ooguy.com)                        | 🇸🇰 SK        | STARK INDUSTRIES | ✅ Data not collected | ❌️ | ❌️ |  |
+| [lbn.frail.duckdns.org](https://lbn.frail.duckdns.org/)         | 🇧🇷 BR        | WSNET TELECOM    | ✅ Data not collected | ✅️ | ❌️ |  |
+| [lbry.ramondia.net](https://lbry.ramondia.net/)		  | 🇩🇪 DE	   | Cloudflare	      | ✅ Data not collected | ✅ | ✅ |  |
 
 ### Tor
 
