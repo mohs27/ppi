@@ -67,7 +67,7 @@
       "name": "lbry.ramondia.net",
       "url": "https://lbry.ramondia.net",
       "country": "🇩🇪 DE",
-      "cloudflare": true,
+      "cloudflare": false,
       "live": true
     },
     {
