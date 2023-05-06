@@ -70,6 +70,13 @@
       "cloudflare": false,
       "live": true
     },
+   {
+      "name": "watch.whateveritworks.org",
+      "url": "https://watch.whateveritworks.org",
+      "country": "🇩🇪 DE",
+      "cloudflare": true,
+      "live": true
+    },
     {
       "name": "librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
       "url": "http://librarian.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
