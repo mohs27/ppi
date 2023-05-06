@@ -104,7 +104,7 @@ Open an issue to have your instance listed here!
 | [lbry.ooguy.com](https://lbry.ooguy.com)                        | 🇸🇰 SK        | STARK INDUSTRIES | ✅ Data not collected | ❌️ | ❌️ |  |
 | [lbn.frail.duckdns.org](https://lbn.frail.duckdns.org/)         | 🇧🇷 BR        | WSNET TELECOM    | ✅ Data not collected | ✅️ | ❌️ |  |
 | [lbry.ramondia.net](https://lbry.ramondia.net/)		          | 🇩🇪 DE	       | Hetzner	      | ✅ Data not collected | ✅ | ✅ |  |
-
+|✅️ [watch.whateveritworks.org](https://watch.whateveritworks.org/)		          | 🇩🇪 DE	       | Hetzner	      | ✅ Data not collected | ✅ | ✅ |  |
 ### Tor
 
 | URL | Privacy               | Live streams | Notes |
